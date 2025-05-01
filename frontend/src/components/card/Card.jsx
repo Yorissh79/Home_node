@@ -21,7 +21,7 @@ const Card = ({ item, who }) => {
           price: object.price,
           author: object.author,
           image: object.image,
-          count: "0"
+          count: "1"
         };
 
         dispatch(postBasketThunk(data));
@@ -34,7 +34,7 @@ const Card = ({ item, who }) => {
           price: object.price,
           author: object.author,
           image: object.image,
-          count: String(Number(object.count) + 1)
+          count: String(Number(exist.count) + 1)
         };
         console.log(data)
         dispatch(deleteBasketThunk(exist._id))
