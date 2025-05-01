@@ -36,7 +36,8 @@ const Card = ({ item, who }) => {
           image: object.image,
           count: String(Number(object.count) + 1)
         };
-
+        console.log(data)
+        dispatch(deleteBasketThunk(exist._id))
         dispatch(postBasketThunk(data));
         console.log("var")
       }
