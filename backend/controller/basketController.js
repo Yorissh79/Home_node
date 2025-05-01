@@ -17,4 +17,5 @@ const deleteBasket = async (req, res) => {
     await basketModel.findByIdAndDelete(id)
     res.json(id)
 }
+
 export { getBasket, deleteBasket, postBasket }
