@@ -23,9 +23,7 @@ const Card = ({ item, who }) => {
           image: object.image,
           count: "1"
         };
-
         dispatch(postBasketThunk(data));
-        console.log("elave eledi")
       } 
       
       else {
@@ -36,13 +34,9 @@ const Card = ({ item, who }) => {
           image: object.image,
           count: String(Number(exist.count) + 1)
         };
-        console.log(data)
         dispatch(deleteBasketThunk(exist._id))
         dispatch(postBasketThunk(data));
-        console.log("var")
       }
-
-
     }
   };
 
@@ -62,7 +56,6 @@ const Card = ({ item, who }) => {
         dispatch(postWishThunk(data));
       }
     }
-
   };
 
   const deleteItem = (kim, id) => {
